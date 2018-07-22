@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <style media="screen">
+        html *{
+            padding: 0;
+            margin: 0;
+        }
+        .layout{
+            margin-top: 100px;
+        }
+        .layout article div{
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!--浮动解决方案-->
+    <section class="layout float">
+        <style media="screen">
+            .layout.float .left{
+                float: left;
+                width: 300px;
+                background-color: aqua;
+            }
+            .layout.float .right{
+                float: right;
+                width: 300px;
+                background-color: blue;
+            }
+            .layout.float .center{
+                background-color: red;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h1>浮动解决方案</h1>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                1.
+                2.
+            </div>
+        </article>
+    </section>
+    <!--绝对定位解决方案-->
+    <section class="layout absolute">
+        <style media="screen">
+            .layout.absolute .left-right-center>div{
+                position: absolute;
+            }
+            .layout.absolute .left{
+                left: 0;
+                width: 300px;
+                background-color: aqua;
+            }
+            .layout.absolute .right{
+                right: 0;
+                width: 300px;
+                background-color: blue;
+            }
+            .layout.absolute .center{
+                left: 300px;
+                right: 300px;
+                background-color: red;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h1>绝对定位解决方案</h1>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                1.
+                2.
+            </div>
+        </article>
+    </section>
+
+    <!--flexbox解决方案-->
+    <section class="layout flexbox">
+        <style media="screen">
+            .layout.flexbox{
+                margin-top: 280px;
+            }
+            .layout.flexbox .left-right-center{
+                display: flex;
+            }
+            .layout.flexbox .left{
+                width: 300px;
+                background-color: aqua;
+            }
+            .layout.flexbox .right{
+                width: 300px;
+                background-color: blue;
+            }
+            .layout.flexbox .center{
+                flex: 1;
+                background-color: red;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left"></div>
+            <div class="center">
+                <h1>flexbox解决方案</h1>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                1.
+                2.
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <!--table解决方案-->
+    <section class="layout table">
+        <style media="screen">
+            .layout.table .left-right-center {
+                width: 100%;
+                display: table;
+                height: 100px;
+            }
+            .layout.table .left-right-center>div{
+                display: table-cell;
+            }
+            .layout.table .left{
+                width: 300px;
+                background-color: aqua;
+            }
+            .layout.table .right{
+                width: 300px;
+                background-color: blue;
+            }
+            .layout.table .center{
+                background-color: red;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left"></div>
+            <div class="center">
+                <h1>table解决方案</h1>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                1.
+                2.
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <!--grid解决方案-->
+    <section class="layout grid">
+        <style media="screen">
+            .layout.grid .left-right-center {
+                display: grid;
+                width: 100%;
+                grid-template-rows: 100px;
+                grid-template-columns: 300px auto 300px;
+            }
+            .layout.grid .left-right-center>div{
+                display: table-cell;
+            }
+            .layout.grid .left{
+                background-color: aqua;
+            }
+            .layout.grid .right{
+                background-color: blue;
+            }
+            .layout.grid .center{
+                background-color: red;
+            }
+        </style>
+        <article class="left-right-center">
+            <div class="left"></div>
+            <div class="center">
+                <h1>grid解决方案</h1>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                <p>增加高度</p>
+                1.
+                2.
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+</body>
+</html>
