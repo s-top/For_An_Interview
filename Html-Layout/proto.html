@@ -8,7 +8,9 @@
     <script type="text/javascript">
         //第一种方式：字面量
         var o1 = {name: 'o1'};
-        var o2 = new Object({name: 'o2'});
+        var o2 = new Object({
+            name: 'o2'
+        });
         //第二种方式：通过构造函数
         var M = function(name){
             this.name = name;
@@ -17,7 +19,6 @@
         //第三种方式：Object.create
         var p = {name: 'p'};
         var o4 = Object.create(p);
-
         M.prototype.say = function(){
           console.log('say hi');
         };

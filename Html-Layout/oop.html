@@ -25,7 +25,7 @@
         /**
          * 实例化
          */
-        console.log(new Animal(), new Animal2())
+        console.log(new Animal(), new Animal2());
 
         /**
          * 借助构造函数实现继承
@@ -85,7 +85,7 @@
             Parent4.call(this);
             this.type = 'child4';
         }
-        Child3.prototype = Parent4.prototype;
+        Child4.prototype = Parent4.prototype;
 
         var s5 = new Child4();
         var s6 = new Child4();
