@@ -26,6 +26,7 @@
     // console.log(flatten(list2));
     // // [ 0, 1, 2, 3, 4, 5, 6 ]
 
+    //数组遍历
     const flattenList = function (arr) {
         return arr.reduce(function (acc,val) {
             return acc.concat(Array.isArray(val) ? flattenList(val) : val)
@@ -34,6 +35,22 @@
     console.log(flattenList(list1));
     console.log(flattenList(list2));
     console.log(flattenList(list3));
+
+    //数组去重
+    Array.prototype.unique3 = function(){
+        var res = [];
+        var json = {};
+        for(var i = 0; i < this.length; i++){
+            if(!json[this[i]]){
+                res.push(this[i]);
+                json[this[i]] = 1;
+            }
+        }
+        return res;
+    };
+    var arr = [112,112,34,'你好',112,112,34,'你好','str','str1'];
+    console.log(arr.unique3());
+
 </script>
 </body>
 </html>
