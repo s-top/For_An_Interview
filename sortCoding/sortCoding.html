@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //reduce(previousValue, currentValue, index, array)
+    var sum = [0, 1, 2, 3].reduce(function(acc, val) {
+        return acc + val;
+    }, 0);
+    console.log(sum);
+    // 6
+    var list1 = [[0, 1], [2, 3], [4, 5]];
+    var list2 = [0, [1, [2, [3, [4, [5, [6]]]]]]];
+    var list3 = [[1],[[2]],[[[3]]]];
+    // const flatten = (arr) => {
+    //     return arr.reduce(
+    //         (acc, val) => {
+    //         return acc.concat(Array.isArray(val) ? flatten(val) : val)
+    //     }, []);
+    // };
+    // console.log(flatten(list1));
+    // // [0, 1, 2, 3, 4, 5]
+    // console.log(flatten(list2));
+    // // [ 0, 1, 2, 3, 4, 5, 6 ]
+
+    const flattenList = function (arr) {
+        return arr.reduce(function (acc,val) {
+            return acc.concat(Array.isArray(val) ? flattenList(val) : val)
+        }, []);
+    };
+    console.log(flattenList(list1));
+    console.log(flattenList(list2));
+    console.log(flattenList(list3));
+</script>
+</body>
+</html>
